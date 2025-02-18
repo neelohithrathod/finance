@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+<table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col" class="start">Symbol</th>
+        <th scope="col" class="end">Shares</th>
+        <th scope="col" class="end">Price</th>
+        <th scope="col" class="end">TOTAL</th>
+      </tr>
+    </thead>
+    <tbody class="portfolio">
+      {% for price in prices %}
+      <tr class="fw-normal">
+        <td class="start">{{ price["name"] }}</td>
+        <td class="end">{{ price["shares"] }}</tdcl>
+        <td class="end">{{ price["price"] | usd }}</td>
+        <td class="end">{{ price["value"] | usd }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+    <tfoot class="portfolio">
+        <tr class="fw-normal text-end">
+            <td colspan=3 class ="fw-bold">Cash</td>
+            <td class="border-0 ">{{ remaining | usd }}</td>
+        </tr>
+        <tr class="text-end">
+          <td colspan=3 class ="fw-bold">TOTAL</td>
+          <td class="border-0 ">{{ total | usd }}</td>
+        </tr>
+    </tfoot>
+  </table>
+{% endblock %}

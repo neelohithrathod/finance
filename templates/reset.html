@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   reset password
+{% endblock %}
+
+{% block main %}
+    <form class ="boxes" action= "/reset" method = "post">
+        <div class = "spacing">
+            <input class="password" name="current_password" type="password" autofocus autocomplete="off" placeholder="Current Password">
+        </div>
+        <div class = "spacing">
+            <input class="new_password" name="new_password" type="password"  autocomplete="off" placeholder="New Password">
+        </div>
+        <div class = "spacing">
+            <input class ="new_password_d" name="new_confirmation" type="password"  autocomplete="off" placeholder="Confirm Password">
+        </div>
+        <button class ="button" type="submit"> RESET </button>
+    </form>
+{% endblock %}

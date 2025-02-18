@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<table class="table">
+    <thead>
+      <tr>
+          <th scope="col" class="start">Symbol</th>
+          <th scope="col" class="end">Type</th>
+          <th scope="col" class="end">Shares</th>
+          <th scope="col" class="end">Price</th>
+          <th scope="col" class="end">Time</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for transaction in transactions %}
+        <tr class="fw-normal">
+          <td class="start">{{ transaction["symbol"] }}</td>
+          <td class ="end">{{ transaction["type"] }}</td>
+          {% if transaction["type"] == "Buy" %}
+            <td class ="end">{{ transaction["shares"] }}</td>
+          {% else %}
+            <td class ="end">-{{ transaction["shares"] }}</td>
+          {% endif %}
+
+          <td class="end">{{ transaction["total"] | usd }}</td>
+          <td class="end">{{ transaction["time"]}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+{% endblock %}

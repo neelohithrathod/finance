@@ -1,0 +1,66 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+.spacing
+{
+    margin-bottom: 1rem;
+}
+.button
+{
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    text-align: center;
+    border-radius: 0.25rem;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #ffd480;
+}
+.boxes input {
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+    outline:none;
+    transition: outline 0.1s ease-in-out;
+}
+.boxes input:focus{
+    outline: 4px solid #add8fa;
+}
+.start{
+    text-align: left;
+}
+.end{
+    text-align:right;
+}
+.table{
+    margin: auto;
+    width: 85%;
+}
+.portfolio {
+    border:2px solid white;
+}
+.btn-custom {
+    background-color: #ffd480;
+}
+
+
